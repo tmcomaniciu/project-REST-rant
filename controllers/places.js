@@ -22,4 +22,9 @@ router.get("/", (req, res) => {
   res.render("places/index", { places: places });
 });
 
+// GET /places/new
+router.get("/new", (req, res) => {
+  res.render("places/new");
+});
+
 module.exports = router;
