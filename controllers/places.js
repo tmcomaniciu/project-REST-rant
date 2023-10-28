@@ -1,5 +1,3 @@
-const new_form = require("../views/places/new");
-
 const router = require("express").Router();
 
 // GET /places
@@ -22,10 +20,6 @@ router.get("/", (req, res) => {
   ];
 
   res.render("places/index", { places: places });
-});
-
-router.get("/new", (req, res) => {
-  res.render("places/new");
 });
 
 module.exports = router;
