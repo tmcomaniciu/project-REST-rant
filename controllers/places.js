@@ -8,6 +8,7 @@ router.get("/new", (req, res) => {
 
 //Get /new
 router.post("/", (req, res) => {
+  console.log(req.body);
   Places.push(req.body);
   res.redirect("/places");
 });
