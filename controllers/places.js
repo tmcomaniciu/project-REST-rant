@@ -1,35 +1,20 @@
 const router = require("express").Router();
-
-//Get /new
-router.get("/new", (req, res) => {
-  res.render("places/new");
-});
-
-// GET /places
-router.get("/", (req, res) => {
-  let places = [
-    {
-      name: "H-Thai-ML",
-      city: "Seattle",
-      state: "WA",
-      cuisines: "Thai, Pan-Asian",
-      pic: "/images/h-thai-ml-tables.png",
-    },
-    {
-      name: "Coding Cat Cafe",
-      city: "Phoenix",
-      state: "AZ",
-      cuisines: "Coffee, Bakery",
-      pic: "/images/coffee-cat.jpg",
-    },
-  ];
-
-  res.render("places/index", { places: places });
-});
+const Places = require("../models/data.js");
 
 // GET /places/new
 router.get("/new", (req, res) => {
   res.render("places/new");
+});
+
+//Get /new
+router.post("/", (req, res) => {
+  Places.push(req.body);
+  res.redirect("/places");
+});
+
+// GET /places
+router.get("/", (req, res) => {
+  res.render("places/index", { places: Places });
 });
 
 module.exports = router;
