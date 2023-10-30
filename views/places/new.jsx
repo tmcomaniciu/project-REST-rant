@@ -5,6 +5,9 @@ function new_form () {
     return (
         <Def>
           <main>
+            <head>
+                <link rel="stylesheet" href="public/style.css"/>    
+            </head>
             <h1>Add a New Place</h1>
             <form method="POST" action="/places">
                 <div className='form-group'>

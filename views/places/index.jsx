@@ -20,6 +20,9 @@ function index (data) {
   return (
     <Def>
         <main>
+          <head>
+            <link rel="stylesheet" href="public/style.css"/>    
+          </head>
             <h1>Places to Rant or Rave About</h1>
             <div className="row">
               {placesFormatted}

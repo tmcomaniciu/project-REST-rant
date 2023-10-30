@@ -5,6 +5,9 @@ function home () {
     return (
         <Def>
             <main>
+                <head>
+                    <link rel="stylesheet" href="public/style.css"/>    
+                </head>
                 <h1>HOME</h1>
                 <div>
                   <img src="public/images/edgar-castrejon-1SPu0KT-Ejg-unsplash.jpg" alt="Vegan Bowl" />

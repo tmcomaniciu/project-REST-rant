@@ -5,6 +5,9 @@ function error404 () {
     return (
       <Def>
           <main>
+            <head>
+              <link rel="stylesheet" href="public/style.css"/>    
+            </head>
                 <div>
                   <img src="public/images/404.jpeg" alt="404 Cat" />
                 </div>
