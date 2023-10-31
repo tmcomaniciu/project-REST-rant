@@ -46,3 +46,8 @@ nav a:hover {
 #show {
   color: skyblue;
 }
+
+img {
+  width: 400px;
+  height: auto;
+}

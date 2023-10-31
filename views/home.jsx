@@ -8,7 +8,7 @@ function home() {
         <h1>REST-Rant</h1>
         <div>
           <img
-            src="public/images/restaurant_logo.jpg"
+            src="/images/restaurant_logo.jpg"
             alt='<a href="https://www.vecteezy.com/free-vector/food-logo">Food Logo Vectors by Vecteezy</a>'/>
           <div>
             Photo by{" "}
