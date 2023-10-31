@@ -5,16 +5,14 @@ function error404 () {
     return (
       <Def>
           <main>
-            <head>
-              <link rel="stylesheet" href="public/style.css"/>    
-            </head>
-                <div>
-                  <img src="public/images/404.jpeg" alt="404 Cat" />
-                </div>
-                <div>Photo by <a href="https://placekitten.com/">PlaceKitten</a></div>
-            </main>
+              <h1>404: PAGE NOT FOUND</h1>
+              <div>
+              <img src='public/images/ErrorPage404-05.jpg' alt='<a href="https://www.vecteezy.com/free-vector/404">404 Vectors by Vecteezy</a>' />
+              </div>
+              <p>Oops, sorry, we can't find this page!</p>
+          </main>
       </Def>
     )
-  }
-  
+  }  
+
 module.exports = error404

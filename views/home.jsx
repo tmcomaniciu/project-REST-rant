@@ -1,24 +1,26 @@
-const React = require('react')
-const Def = require('./default')
+const React = require("react");
+const Def = require("./default");
 
-function home () {
-    return (
-        <Def>
-            <main>
-                <head>
-                    <link rel="stylesheet" href="public/style.css"/>    
-                </head>
-                <h1>HOME</h1>
-                <div>
-                  <img src="public/images/edgar-castrejon-1SPu0KT-Ejg-unsplash.jpg" alt="Vegan Bowl" />
-                </div>
-                <div>Photo by <a href="https://unsplash.com/@edgarraw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Edgar Castrejon</a> on <a href="https://unsplash.com/photos/silver-spoon-on-black-ceramic-bowl-with-vegetables-1SPu0KT-Ejg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></div>
-                <a href="/places">
-                    <button className="btn-primary">Places Page</button>
-                </a>
-            </main>
-        </Def>
-    )
+function home() {
+  return (
+    <Def>
+      <main>
+        <h1>REST-Rant</h1>
+        <div>
+          <img
+            src="public/images/restaurant_logo.jpg"
+            alt='<a href="https://www.vecteezy.com/free-vector/food-logo">Food Logo Vectors by Vecteezy</a>'/>
+          <div>
+            Photo by{" "}
+            <a href="https://www.vecteezy.com/members/agung_cs">Ajung CS</a> on{" "}
+            <a href="https://www.vecteezy.com/vector-art/8799559-vintage-retro-restaurant-classic-food-with-fork-spoon-and-dish-design-concept-emblem-logo-template">
+              Vecteezy
+            </a>
+          </div>
+        </div>
+      </main>
+    </Def>
+  );
 }
 
-module.exports = home
+module.exports = home;
