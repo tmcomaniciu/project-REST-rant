@@ -48,6 +48,11 @@ nav a:hover {
 }
 
 img {
-  width: 400px;
-  height: auto;
+  width: 600px;
+  height: 500px;
+}
+
+#homeimg {
+  width: 640px;
+  height: 360px;
 }
