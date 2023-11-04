@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("./models");
 
 db.Place.create([
   {
@@ -6,23 +6,21 @@ db.Place.create([
     city: "Seattle",
     state: "WA",
     cuisines: "Thai, Pan-Asian",
-    pic: "/images/h-thai-ml-tables.jpg",
-    founded: 1989,
+    pic: "/images/thai_rest.jpeg",
   },
   {
     name: "Coding Cat Cafe",
     city: "Phoenix",
     state: "AZ",
     cuisines: "Coffee, Bakery",
-    pic: "/images/coffee-cat.jpg",
-    founded: 2020,
+    pic: "/images/cat_rest.avif",
   },
 ])
   .then(() => {
-    console.log("Success!");
+    console.log("Success");
     process.exit();
   })
-  .catch((err) => {
-    console.log("Failure!", err);
+  .catch((error) => {
+    console.log("Failure", err);
     process.exit();
   });

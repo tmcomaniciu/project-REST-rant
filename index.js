@@ -1,47 +1,38 @@
-// DEPENDENCIES
+// Modules and Globals
+require("dotenv").config();
 const express = require("express");
 const methodOverride = require("method-override");
-const placesController = require("./controllers/places.js"); //<-- nodemon will not run if this is placed
+const app = express();
 const mongoose = require("mongoose");
 
-// CONFIGURATION
-require("dotenv").config();
-const PORT = process.env.PORT;
-const app = express();
-const MONGO_URI = process.env.MONGO_URI;
-
-// MIDDLEWARE
+// Express Settings
 app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+const MONGO_URI = process.env.MONGO_URI;
+const PORT = process.env.PORT;
 
-//Places
-app.use("/places", placesController);
+// Controllers & Routes
+app.use("/places", require("./controllers/places"));
 
-// ROUTES
 app.get("/", (req, res) => {
-  res.render("Home");
+  res.render("home");
 });
 
 app.get("*", (req, res) => {
   res.render("error404");
 });
 
+// Listen for Connections
 const start = async () => {
-  try {
-    await mongoose.connect(MONGO_URI);
-    console.log("connected to Mongo");
-  } catch (e) {
-    console.log("error");
-  }
-
-  // LISTEN
+  await mongoose.connect(MONGO_URI);
+  console.log("Connected to database");
   app.listen(PORT, () => {
     console.log("listening on port", PORT);
   });
 };
+
 start();
-module.exports = app;
