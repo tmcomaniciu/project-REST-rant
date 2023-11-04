@@ -48,11 +48,35 @@ nav a:hover {
 }
 
 img {
-  width: 600px;
-  height: 500px;
+  width: 400px;
+  height: auto;
 }
 
 #homeimg {
   width: 640px;
   height: 360px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333; /* Background color of the navbar */
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white; /* Text color of the links */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111; /* Background color on hover */
 }
