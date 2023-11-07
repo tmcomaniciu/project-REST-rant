@@ -1,38 +1,31 @@
-// Modules and Globals
+//required modules
 require("dotenv").config();
 const express = require("express");
-const methodOverride = require("method-override");
 const app = express();
+const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 
-// Express Settings
+//middleware
 app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-const MONGO_URI = process.env.MONGO_URI;
-const PORT = process.env.PORT;
+mongoose.connect(process.env.MONGO_URI, {});
 
-// Controllers & Routes
+//controllers
 app.use("/places", require("./controllers/places"));
 
+// home page
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("Home");
 });
 
+//wildcard
 app.get("*", (req, res) => {
-  res.render("error404");
+  res.render("Error404");
 });
 
-// Listen for Connections
-const start = async () => {
-  await mongoose.connect(MONGO_URI);
-  console.log("Connected to database");
-  app.listen(PORT, () => {
-    console.log("listening on port", PORT);
-  });
-};
-
-start();
+// start server
+app.listen(process.env.PORT);
