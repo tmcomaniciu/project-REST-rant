@@ -5,16 +5,21 @@ function home() {
   return (
     <Def>
       <main>
-        <h1>REST-Rant</h1>
+        <h1>Rant or Rave</h1>
         <div>
+          <div>
+            <br></br>
+          </div>
           <img
-            src="/images/restaurant_logo.jpg"
-            alt='<a href="https://www.vecteezy.com/free-vector/food-logo">Food Logo Vectors by Vecteezy</a>'/>
+            src="/images/main_logo.png"
+            alt='<a href="https://www.beaufortcountynow.com/uploads/created_by_sni/logos/BO_Logo_with_Man.png">Rant and Rave by Vecteezy</a>'
+            className = "titleImage"
+            />
           <div>
             Photo by{" "}
-            <a href="https://www.vecteezy.com/members/agung_cs">Ajung CS</a> on{" "}
-            <a href="https://www.vecteezy.com/vector-art/8799559-vintage-retro-restaurant-classic-food-with-fork-spoon-and-dish-design-concept-emblem-logo-template">
-              Vecteezy
+            <a href="https://www.beaufortcountynow.com/uploads/created_by_sni/logos/BO_Logo_with_Man.png">Sni</a> on{" "}
+            <a href="https://www.beaufortcountynow.com/">
+              Beaufort County Now
             </a>
           </div>
         </div>
